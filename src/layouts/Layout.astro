@@ -1,42 +1,57 @@
 ---
-import Footer from '@components/Footer.astro';
-import Navbar from '@components/Navbar.astro';
-import { SEO } from 'astro-seo';
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import { SEO } from "astro-seo";
 
 export interface LayoutProps {
-	title: string;
+  title: string;
 }
 
-const { title = 'John Doe | Web developer' } = Astro.props as LayoutProps;
+const { title = "Asanda Majola " } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-testid="html">
-	<head>
-		<SEO
-			title="A Very Descriptive Title"
-			description="A heavily optimized description full of well-researched keywords."
-		/>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <head>
+    <SEO
+      title="Portfolio Website"
+      description="A Personal portfolio to showcase Asanda Majola's work"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-		<title>{title}</title>
-	</head>
-	<body
-		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
-	>
-		<Navbar />
-		<slot />
-		<Footer />
-		<style is:global>
-			/* Improve Page speed */
-			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-			img {
-				content-visibility: auto;
-			}
-		</style>
-	</body>
+    <title>{title}</title>
+  </head>
+  <body
+    class="mx-auto max-w-screen-xl bg-black px-5 font-sans text-white xs:text-[16px] md:text-[18px]">
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      img {
+        content-visibility: auto;
+      }
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </body>
 </html>
