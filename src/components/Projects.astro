@@ -2,9 +2,7 @@
 import Card from '@components/ui/Card.astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects', ({ data }) => {
-	return !data.inProgress;
-});
+const projects = await getCollection('projects');
 ---
 
 <section
@@ -22,6 +20,7 @@ const projects = await getCollection('projects', ({ data }) => {
 					title={project.data.title}
 					alt={project.data.img_alt}
 					tags={project.data.tags}
+					imageSrc={project.data.image}
 				/>
 			))
 		}
