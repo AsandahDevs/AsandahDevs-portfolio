@@ -1,6 +1,4 @@
 ---
-import heroImage from '@assets/images/hero.png';
-import { Image } from '@astrojs/image/components';
 import Button from '@components/ui/Button.astro';
 ---
 
@@ -10,24 +8,39 @@ import Button from '@components/ui/Button.astro';
 >
 	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
 		<div>
-			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-				Hi! My name is <span class="text-orange">Jane Doe</span> and I am a web developer based in New
-				York.
+			<h1 class="mb-2 font-monospace text-3xl text-black lg:text-5xl ">
+				 Asanda Majola
 			</h1>
+			<h2 class="text-white typewriter">Front-End / Ionic App Developer .</h2>
 		</div>
-		<div class="mb-10">
-			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more">Learn more</Button>
+		<div class="mt-5">
+			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more">Download Resume</Button>
 		</div>
 	</div>
-	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">
-		<Image
-			src={heroImage}
-			alt="Coding girl"
-			aspectRatio="4:4"
-			format="png"
-			width={600}
-			height={600}
-			loading="eager"
-		/>
-	</div>
+	
 </section>
+
+<style>
+h2.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid pink; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:pink; }
+}
+</style>
