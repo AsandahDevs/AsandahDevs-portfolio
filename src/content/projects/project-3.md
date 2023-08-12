@@ -1,5 +1,5 @@
 ---
-image: src/assets/images/angular-wine-store.webp
+image: /assets/images/angular-wine-store.webp
 title: Wine-Store
 img_alt: Wine-Store
 link: https://jolinkomowinery.netlify.app/
