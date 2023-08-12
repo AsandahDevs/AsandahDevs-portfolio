@@ -1,5 +1,5 @@
 ---
-image: https://asandamajola.vercel.app/_astro/Amabele_preview_Z1dNyDi.webp
+image: src/assets/images/Amabele_preview.png
 title: Amabele
 img_alt: Amabele
 link: https://asandahdevs.github.io/Amabele/
