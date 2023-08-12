@@ -20,11 +20,9 @@ const { url = '#', alt = 'Project image', title = 'Project title', tags = ['Tags
 	>
 		<a href={url} aria-label="link to project">
 			<div class="relative flex items-end overflow-hidden rounded-xl">
-				<Image
+				<img
 					src={imageSrc}
 					alt={alt}
-					aspectRatio="4:4"
-					format="webp"
 					width={400}
 					height={400}
 					loading="lazy"
