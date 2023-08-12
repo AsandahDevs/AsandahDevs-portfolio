@@ -1,5 +1,5 @@
 ---
-image: https://AsandahDevs.github.io/AsandahDevs/AsandahDevs-portfolio/src/assets/images/angular-wine-store.webp
+image: https://asandamajola.vercel.app/_astro/angular-wine-store_Z26b6Rj.webp
 title: Wine-Store
 img_alt: Wine-Store
 link: https://jolinkomowinery.netlify.app/
